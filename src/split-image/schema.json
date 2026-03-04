@@ -19,13 +19,13 @@
             "description": "Src of first image",
             "type": "string",
             "x-prompt": "Whats the src of first image?",
-            "default": "https://cdn.pixabay.com/photo/2024/08/03/09/42/ai-generated-8941651_1280.jpg"
+            "default": "https://cdn.pixabay.com/photo/2023/09/19/15/41/ai-generated-8262916_1280.jpg"
         },
         "imageSrc2": {
             "description": "Src of second image",
             "type": "string",
             "x-prompt": "Whats the src of second image?",
-            "default": "https://cdn.pixabay.com/photo/2023/09/19/15/41/ai-generated-8262916_1280.jpg"
+            "default": "https://cdn.pixabay.com/photo/2024/08/03/09/42/ai-generated-8941651_1280.jpg"
         },
         "addRoute": {
             "description": "Add route to app.routes.ts",
