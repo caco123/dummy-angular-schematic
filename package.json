@@ -18,8 +18,9 @@
     "typescript": "~5.9.2"
   },
   "devDependencies": {
-    "@types/node": "^20.17.19",
+    "@schematics/angular": "^21.2.0",
     "@types/jasmine": "~6.0.0",
+    "@types/node": "^20.17.19",
     "jasmine": "^6.0.0"
   }
 }
