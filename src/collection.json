@@ -1,12 +1,17 @@
 {
   "schematics": {
     "ng-add": {
-      "description": "A blank schematic.",
+      "description": "Ng add schematic.",
       "factory": "./ng-add/index#ngAdd"
     },
     "install-packages": {
-      "description": "A blank schematic.",
+      "description": "Install packages schematic.",
       "factory": "./install-packages/index#installPackages"
+    },
+    "split-image": {
+      "description": "Split image schematic.",
+      "factory": "./split-image/index#splitImage",
+      "schema": "./split-image/schema.json"
     }
   }
 }

@@ -1,0 +1,1 @@
+<div NgxImageSplitter [imgSrc1]="imgSrc1" [imgSrc2]="imgSrc2">

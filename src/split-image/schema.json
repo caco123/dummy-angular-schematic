@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "SplitImageSchematic",
+    "title": "Split Image Component",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "The name of the component",
+            "type": "string"
+        },
+        "path": {
+            "description": "Where should be created the file",
+            "type": "string",
+            "format": "path",
+            "x-prompt": "Where should be created the file?",
+            "default": "src/app/components"
+        },
+        "imageSrc1": {
+            "description": "Src of first image",
+            "type": "string",
+            "x-prompt": "Whats the src of first image?",
+            "default": "https://cdn.pixabay.com/photo/2024/08/03/09/42/ai-generated-8941651_1280.jpg"
+        },
+        "imageSrc2": {
+            "description": "Src of second image",
+            "type": "string",
+            "x-prompt": "Whats the src of second image?",
+            "default": "https://cdn.pixabay.com/photo/2023/09/19/15/41/ai-generated-8262916_1280.jpg"
+        },
+        "addRoute": {
+            "description": "Add route to app.routes.ts",
+            "type": "boolean",
+            "x-prompt": "Add route to app.routes.ts?",
+            "default": false
+        }
+    },
+    "required": []
+}

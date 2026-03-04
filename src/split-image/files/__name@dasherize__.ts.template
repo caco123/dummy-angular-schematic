@@ -1,0 +1,13 @@
+import { Component } from '@angular/core';
+import { NgxImageSplitterDirective } from 'ngx-caco-image-splitter';
+
+@Component({
+  selector: 'app-<%= dasherize(name) %>',
+  imports: [ NgxImageSplitterDirective ],
+  templateUrl: './<%= dasherize(name) %>.html',
+  styleUrl: './<%= dasherize(name) %>.scss',
+})
+export class <%= classify(name) %> {
+  imgSrc1 = '<%= imageSrc1 %>';
+  imgSrc2 = '<%= imageSrc2 %>';
+}
