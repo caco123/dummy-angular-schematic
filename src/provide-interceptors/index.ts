@@ -5,9 +5,10 @@ import { normalize } from 'path';
 
 export function provideInterceptors(_options: Schema): Rule {
   return (tree: Tree, context: SchematicContext) => {
+    context.logger.info('🚀 Initialising Interceptors Schematic');
     const path = 'src/app/interceptors';
-    context.logger.info('Initialising Interceptors Schematic');
     if (tree.exists(`${path}/http-error-interceptor.ts`) && tree.exists(`${path}/headers-interceptor.ts`)) {
+      context.logger.info('✅ Interceptors already exist');
       return tree;
     }
     const interceptors: Rule[] = [];

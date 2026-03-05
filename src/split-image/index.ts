@@ -7,7 +7,7 @@ import { Schema } from './schema';
 // per file.
 export function splitImage(_options: Schema): Rule {
   return (_tree: Tree, _context: SchematicContext) => {
-    _context.logger.info('Split Image Schematic');
+    _context.logger.info('🚀 Split Image Schematic');
 
     const { imageSrc1, addRoute, imageSrc2, ..._angularOptions } = _options;
 
@@ -41,7 +41,7 @@ function addRouteToAppRoutes(_options: Schema): Rule {
     const routesPath = `${_options.path}/../app.routes.ts`;
 
     if (!tree.exists(routesPath)) {
-      _context.logger.warn(`app.routes.ts not found at ${routesPath}`);
+      _context.logger.warn(`❌ app.routes.ts not found at ${routesPath}`);
       return tree;
     }
 

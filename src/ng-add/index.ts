@@ -6,20 +6,18 @@ import { getPackageJsonDependency } from '@schematics/angular/utility/dependenci
 // per file.
 export function ngAdd(): Rule {
   return (tree: Tree, context: SchematicContext) => {
-
+    context.logger.info('🚀 Initialising NgAdd Schematic');
     const dep = getPackageJsonDependency(tree, '@angular/core');
 
     if (!dep) {
-      context.logger.error('@angular/core package missing');
+      context.logger.error('❌ @angular/core package missing');
       return tree;
     }
 
     let taskId: TaskId | undefined = context.addTask(new RunSchematicTask('install-packages', {}));
 
     if (!taskId) {
-      throw new SchematicsException(
-        'No se ha ejecutado ninguna tarea de aprovisionamiento'
-      );
+      throw new SchematicsException('❌ No se ha ejecutado ninguna tarea de aprovisionamiento');
     }
 
     context.addTask(new NodePackageInstallTask(), [taskId]);
