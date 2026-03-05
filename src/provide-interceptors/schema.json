@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "ProvideInterceptorsSchematic",
+    "title": "Provide Interceptors",
+    "type": "object",
+    "properties": {
+        "project": {
+            "type": "string",
+            "description": "The name of the project to update."
+        },
+        "interceptors": {
+            "type": "array",
+            "description": "Specifies the type(s) of interceptor to create.",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": {
+                "enum": [
+                    "ErrorInterceptor",
+                    "HeadersInterceptor"
+                ],
+                "type": "string"
+            },
+            "default": [
+                "ErrorInterceptor"
+            ],
+            "x-prompt": "Which type of interceptor would you like to create?"
+        }
+    },
+    "required": []
+}

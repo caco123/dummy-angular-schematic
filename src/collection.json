@@ -12,6 +12,11 @@
       "description": "Split image schematic.",
       "factory": "./split-image/index#splitImage",
       "schema": "./split-image/schema.json"
+    },
+    "provide-interceptors": {
+      "description": "Provide interceptors schematic.",
+      "factory": "./provide-interceptors/index#provideInterceptors",
+      "schema": "./provide-interceptors/schema.json"
     }
   }
 }

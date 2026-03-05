@@ -11,7 +11,6 @@ export function splitImage(_options: Schema): Rule {
 
     const { imageSrc1, addRoute, imageSrc2, ..._angularOptions } = _options;
 
-
     const templateSrc = apply(url('./files'), [
       applyTemplates({
         classify: strings.classify,
@@ -22,6 +21,7 @@ export function splitImage(_options: Schema): Rule {
       }),
       move(normalize(`/${_options.path}/${strings.dasherize(_options.name)}`)),
     ]);
+
     if (addRoute) {
       return chain([
         externalSchematic('@schematics/angular', 'component', _angularOptions),
